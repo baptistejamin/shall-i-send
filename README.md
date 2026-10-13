@@ -22,6 +22,14 @@ import ShallISend from "shall-i-send";
 
 const shallISend = new ShallISend();
 
+// Assess right now
+const now = shallISend.assess("FR");
+
+if (now.shouldDelay) {
+  console.log(`Better send it at ${now.next?.at}`);
+}
+
+// Assess a specific instant
 const assessment = shallISend.assess("FR", "2026-09-10T21:30:00Z");
 
 assessment.recommendation; // "delay"
@@ -30,7 +38,7 @@ assessment.next?.at; // "2026-09-11T07:00:00.000Z"
 assessment.next?.localTime; // "2026-09-11T09:00:00"
 ```
 
-The instant can be a `Date`, a timestamp or an ISO string. It defaults to now.
+The instant is optional and defaults to now. It can be a `Date`, a timestamp or an ISO string.
 
 ## API
 
