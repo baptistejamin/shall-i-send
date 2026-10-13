@@ -1,0 +1,19 @@
+{
+  "include": ["lib/**/*.ts", "test/**/*.ts"],
+  "compilerOptions": {
+    "declaration": true,
+    "outDir": "dist/",
+    "module": "commonjs",
+    "target": "es2017",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "Node",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["lib/*"]
+    },
+    "types": ["node", "jest"]
+  }
+}

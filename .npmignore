@@ -1,0 +1,13 @@
+test/
+examples/
+.github/
+.gitignore
+.jshintrc
+.jscsrc
+.checkbuild
+package-lock.json
+lib/
+jest.config.mjs
+eslint.config.mjs
+tsconfig.json
+tsconfig.build.json
